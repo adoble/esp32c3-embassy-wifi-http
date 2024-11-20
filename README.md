@@ -4,6 +4,8 @@ An embassy example to access a web site over WiFi from the ESP32-C3.
 The web site is accessed and printed to the terminal when
 a button is pressed.
 
+Inspired by [this video](https://www.youtube.com/watch?v=AC4nZ67Qj20) and based on the code [here](https://github.com/flyaruu/esp32-nostd).
+
 The goals are:
 - Only use crates that are in `crates.io` (no crates loaded from a github repository)
 - Use, as far as possible, the latest version of the crates.
