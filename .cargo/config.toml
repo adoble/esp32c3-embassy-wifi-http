@@ -1,0 +1,21 @@
+[target.riscv32imc-unknown-none-elf]
+runner = "espflash flash --monitor"
+
+
+[env]
+ESP_LOG="info"
+
+[build]
+rustflags = [
+  # Required to obtain backtraces (e.g. when using the "esp-backtrace" crate.)
+  # NOTE: May negatively impact performance of produced code
+  # ALSO see this for a what options are required: https://docs.esp-rs.org/esp-hal/esp-wifi/0.10.1/esp32c3/esp_wifi/
+  "-C", "force-frame-pointers",
+  "-C", "link-arg=-Tlinkall.x",
+  "-C", "link-arg=-Trom_functions.x",
+]
+
+target = "riscv32imc-unknown-none-elf"
+
+[unstable]
+build-std = ["core"]
