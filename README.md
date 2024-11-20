@@ -16,4 +16,4 @@ Notes:
   the dependencies used actually use the latest version.
 - For the embassy-executor the default version of the "feature" `task-arena-size` was too small.
 
-License: MIT OR Apache-2.0
+License: MIT
